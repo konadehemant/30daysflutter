@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_3/utils/routes.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -60,7 +61,7 @@ class _LoginPageState extends State<LoginPage> {
              Container(
               
                child: ElevatedButton(onPressed: (){
-                print("pressed");
+                Navigator.pushNamed(context, MyRoutes.homePage);
                }, 
                child: Text("login")),
              )
