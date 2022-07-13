@@ -10,11 +10,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context){
     return MaterialApp(
-      
+      themeMode: ThemeMode.light,
+
+  
    
-      theme: ThemeData(primarySwatch: Colors.cyan),
+      theme: ThemeData(primarySwatch: Colors.cyan,
+      appBarTheme: AppBarTheme(color: Colors.white,
+      elevation: 0.0
+      iconTheme: IconTheme
+      )
+      ),
       routes: {
-        "/" :(context) => LoginPage(),
+        "/" :(context) => HomePage(),
         MyRoutes.loginPage :(context) =>  LoginPage(),
         MyRoutes.homePage :(context) => HomePage()
       }
